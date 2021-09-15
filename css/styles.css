@@ -90,11 +90,38 @@ li{
     display: flex;
     justify-content: space-evenly;
     align-items:center;
-    max-width: 65vw;
     margin: 0 auto;
     text-align: center;
     text-transform: uppercase;
-    padding: 1em;
+    padding: 1em 9%;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    z-index: 0;
+}
+@media (min-width:951px ) {
+    .site-navigation.nav-scrolled {
+        position: fixed;
+        z-index: 15;
+        background-color: #000000e5;
+        color: black;
+        animation: navigation 2s alternate;
+    }
+
+    .site-navigation.nav-scrolled a {
+        color: white;
+    }
+
+    @keyframes navigation {
+        from {
+            transform: translateY(11%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
 }
 @media (max-width: 1250px) {
     .site-navigation {
@@ -132,6 +159,9 @@ li{
 .barraButton .mobile {
     display: none;
 }
+
+
+
 @media (max-width: 950px) {
     .barra {
         display: flex;
@@ -162,8 +192,8 @@ li{
         background-color: white;
         position: fixed;
         z-index: 5;
-        top: 7%;
-        padding: 9% 10%;
+        top: 9.8%;
+        padding: 10.5% 10%;
     }
     .site-navigation li{
         margin: .4em 0;
@@ -276,12 +306,21 @@ li{
     align-items: center;
     gap: 3em;
     min-height:86vh;
-    flex-wrap: wrap;
-    padding: 0 9%;
+    padding:2em 9%;
     border-bottom: 1px solid var(--secondary-light);
     
 }
+@media (max-width: 1400px) {
+    .section-info .flex-row {
+        justify-content: center;
+    }
+}
+@media (max-width:1030px) {
+    .section-info .flex-row {
+        flex-wrap: wrap;
 
+    }
+}
 .info-text {
     display: flex;
     justify-content: flex-start;

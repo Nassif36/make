@@ -32,4 +32,27 @@ var menuLinks = document.querySelectorAll(".site-navigation li");
 
 menuLinks.forEach(menuLinks => menuLinks.addEventListener('click', () => {
     menu.classList.toggle('active');
+    menuBtn.classList.toggle('active');
 }));
+
+const header = document.querySelector('.site-navigation')
+const sectionOne = document.querySelector('.reverse');
+
+const sectionOneOptions = {
+    rootMargin: "150px 0px 0px 0px"
+};
+
+const sectionOneObserver = new IntersectionObserver(
+    function (entries, sectionOneObserver) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                header.classList.remove('nav-scrolled');
+            } else {
+
+                header.classList.add('nav-scrolled');
+            }
+        })
+    },
+    sectionOneOptions);
+
+sectionOneObserver.observe(sectionOne);
