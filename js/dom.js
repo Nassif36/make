@@ -39,7 +39,7 @@ const header = document.querySelector('.site-navigation')
 const sectionOne = document.querySelector('.reverse');
 
 const sectionOneOptions = {
-    rootMargin: "150px 0px 0px 0px"
+    rootMargin: "1200px 0px 0px 0px"
 };
 
 const sectionOneObserver = new IntersectionObserver(

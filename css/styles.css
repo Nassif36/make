@@ -97,7 +97,7 @@ li{
     position: absolute;
     left: 0;
     right: 0;
-
+    transition: background-color 1s ease;
     z-index: 0;
 }
 @media (min-width:951px ) {
@@ -106,7 +106,7 @@ li{
         z-index: 15;
         background-color: #000000e5;
         color: black;
-        animation: navigation 2s alternate;
+        animation: navigation 1s alternate;
     }
 
     .site-navigation.nav-scrolled a {
@@ -115,7 +115,7 @@ li{
 
     @keyframes navigation {
         from {
-            transform: translateY(11%);
+            transform: translateY(4%);
         }
 
         to {
@@ -356,7 +356,9 @@ li{
     }
 }
 .info-img img {
-    max-width: 800px;
+    max-width: 1200px;
+    max-height: 600px;
+    aspect-ratio:1 / 1;
 }
 /** galeria **/
 .section-galeria {
