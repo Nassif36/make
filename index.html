@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catering</title>
+    <title>Make | Eventos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600;700&display=swap"
@@ -85,7 +85,7 @@
         </section>
         <section class="section-galeria">
             <div class="flex-col mid-title">
-                <h3>imágenes</h3>
+                <h3>budget</h3>
                 <p>En Make eventos trabajamos con el presupuesto que el cliente tenga.</p>
             </div>
             <div class="carousel-wrapper">
@@ -150,43 +150,20 @@
                 <h3>Contactanos</h3>
                 <p>Escribinos!</p>
             </div>
-            <form action="" class="contact-form">
+            <form action="#" class="contact-form" id="form-contacto" onsubmit="return false" ; method="post">
                 <div class="campo">
-                    <input type="text" placeholder="Nombre y Apellido">
+                    <input type="text" placeholder="Nombre y Apellido" id="nom">
                 </div>
-                <div class="campo-medium">
-                    <input type="email" placeholder="Email (requerido)">
-                    <input type="number" placeholder="Teléfono (requerido)">
-                </div>
-                <div class="campo-medium">
-                    <input type="text" placeholder="Lugar del Evento (requerido)">
-                    <input type="date" placeholder="Fecha del Evento (requerido)">
-                </div>
+
+
                 <div class="campo">
-                    <input type="number" placeholder="Cantidad de Personas (requerido)">
-                </div>
-                <div class="campo">
-                    <select name="- Tipo de evento -" >
-                        <option value="bar">Bar/Bar Mitzva</option>
-                        <option value="casamiento">Casamiento</option>
-                        <option value="civil">Civil</option>
-                        <option value="corporativo">Corporativo</option>
-                        <option value="cumpleaños">Cumpleaños</option>
-                        <option value="cumpleaños-15">Cumpleaños de 15</option>
-                        <option value="social">Social</option>
-                        <option value="otros">Otros</option>
-                    </select>
-                </div>
-                <div class="campo">
-                    <textarea name="mensaje" placeholder="Mensaje (requerido)"></textarea>
+                    <textarea name="mensaje" placeholder="Mensaje (requerido)" required id="msg"></textarea>
                 </div>
                 <div class="buttons-form">
-                    <button type="submit" class="btn-send">
+                    <button type="submit" class="btn-send" id="formEnviar" value="Enviar">
                         enviar mensaje
                     </button>
-                    <button  class="btn-delete">
-                        borrar
-                    </button>
+
                 </div>
             </form>
         </div>
@@ -231,5 +208,6 @@
         </section>
     </footer>
     <script src="js/dom.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
